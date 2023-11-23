@@ -22,10 +22,9 @@ for n in range(1,nr_symbols+1):
 for n in range(1,nr_numbers+1):
   password+=random.choice(numbers)
 randomisation = input(f"You're generated password is {password}. Are you satisfied with it or would you like to randomise it? Type 1 to randomise.")
+randpw = password
 if randomisation=="1":
   password = list(password)
   random.shuffle(password)
   randpw = "".join(password)
-  print(f"Your randomised password is : {randpw}")
-else :
-  print(f"Thanks for using this password generator. Your final password is : {password}")
+print(f"Thanks for using this password generator. Your final password is : {randpw}")
